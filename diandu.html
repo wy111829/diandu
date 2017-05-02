@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="description" content="">
+    <meta content="width=device-width,user-scalable=no,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+          name="viewport">
+    <script src="static/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/diandu.css"/>
+    <title>小e英语点读机</title>
+</head>
+<body>
+<div class="header">
+    <a class="backList" href="javascript:;"><em></em>返回目录</a>
+    <span></span>
+    <a class="gotoApp" href="#">下载小学英语APP更多学习资料<img src="images/arrows.png" alt=""/></a>
+</div>
+<div class="diandu">
+    <div id="diandu"></div>
+    <img src="" id="imgShow" data-picId='' usemap="#img_map"/>
+    <map id="img_map" name="img_map"></map>
+</div>
+<audio id="audio" src="static/1111.mp3" style="opacity: 0" hidden="true" preload="auto"></audio>
+<div id="mytext" class="mytext"></div>
+<div class="footer">
+    <span id="pre" class="pre"></span>
+    <input class="operate" type=button id="pstart" value="连读" onclick="Operate.start()">
+    <input class="operate" type=button id="pplay" value="开始" onclick="Operate.play()" style="display: none">
+    <input class="operate" type=button id="ppause" value="暂停" onclick="Operate.pause()" style="display: none">
+    <span id="next" class="next"></span>
+</div>
+<div class="page-load" id="page-load">
+    <div>
+        <img src="images/loading.gif" alt=""/>
+        <br/>
+        <span>0%</span>
+    </div>
+
+</div>
+</body>
+<script src="js/init.js"></script>
+<script src="js/diandu.js"></script>
+</html>
